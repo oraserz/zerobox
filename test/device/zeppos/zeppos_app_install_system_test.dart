@@ -145,7 +145,7 @@ class _FakeConnection implements CharacteristicTransport, BluetoothConnection {
       return;
     }
     dataWrites.add(Uint8List.fromList(data));
-    dataWriteModes.add(withResponse);
+    dataWriteModes.add(withResponse ?? false);
     _received += data.length;
     if (_received == 8 || _received == totalBytes) {
       final offset = _received;
