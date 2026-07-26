@@ -1,1 +1,0 @@
-enum ConnectType { spp, ble }
