@@ -11,7 +11,7 @@ jobs:
         with:
           channel: stable
       - run: flutter pub get
-      - run: powershell --File windows/scripts/install_webview2_sdk.ps1
+      - run: powershell -File windows/scripts/install_webview2_sdk.ps1
       - run: powershell -File tool/build_windows.ps1
       - uses: actions/upload-artifact@v4
         with:
